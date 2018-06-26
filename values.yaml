@@ -18,6 +18,9 @@ nginx-ingress:
     service:
         type: NodePort 
 
+minio:
+  persistence:
+    enabled: false
 ingress:
   enabled: false
   annotations: {}
