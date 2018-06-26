@@ -13,9 +13,18 @@ service:
   type: ClusterIP
   port: 80
 
+nginx-ingress:
+  controller:
+    service:
+        type: NodePort 
+
 ingress:
   enabled: false
   annotations: {}
+  controller:
+    service:
+      type: NodePort 
+     # externalTrafficPolicy: NodePort 
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   path: /
