@@ -27,6 +27,8 @@ ingress:
   controller:
     service:
       type: NodePort 
+      nodePorts:
+        http: 80
      # externalTrafficPolicy: NodePort 
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
