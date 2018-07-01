@@ -21,6 +21,8 @@ nginx-ingress:
 minio:
   persistence:
     enabled: false
+  service: 
+    clusterIP: ''
 ingress:
   enabled: false
   annotations: {}
